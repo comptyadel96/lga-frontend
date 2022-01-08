@@ -129,7 +129,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
             }
             to="/"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             Acceuil
           </NavLink>
@@ -140,7 +143,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
             }
             to="/APropos"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             A Propos
           </NavLink>
@@ -153,7 +159,10 @@ function Navbar() {
                     : "text-gray-600  font-semibold text-xl px-3 py-3  relative"
                 }
                 to="/Formations"
-                onClick={toggleBurgerNav}
+                onClick={() => {
+                  toggleBurgerNav()
+                  setBurgerOpened(!burgerOpened)
+                }}
               >
                 Formations
               </NavLink>
@@ -201,7 +210,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
             }
             to="/OffresEmploi"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             Offres d'emploi
           </NavLink>
@@ -212,7 +224,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
             }
             to="/Produits"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             Produits
           </NavLink>
@@ -225,7 +240,10 @@ function Navbar() {
                     : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
                 }
                 to="/RejoignezNous"
-                onClick={toggleBurgerNav}
+                onClick={() => {
+                  toggleBurgerNav()
+                  setBurgerOpened(!burgerOpened)
+                }}
               >
                 Rejoignez nous
               </NavLink>
@@ -275,7 +293,10 @@ function Navbar() {
                     : "text-gray-600  font-semibold text-xl px-3 py-3  relative"
                 }
                 to="/Services"
-                onClick={toggleBurgerNav}
+                onClick={() => {
+                  toggleBurgerNav()
+                  setBurgerOpened(!burgerOpened)
+                }}
               >
                 Services
               </NavLink>
@@ -322,7 +343,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
             }
             to="/LgaConsulting"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             LGA Consultation blog
           </NavLink>
@@ -333,7 +357,10 @@ function Navbar() {
                 : "text-gray-600 font-semibold text-xl px-3 py-3   relative"
             }
             to="/Contact"
-            onClick={toggleBurgerNav}
+            onClick={() => {
+              toggleBurgerNav()
+              setBurgerOpened(!burgerOpened)
+            }}
           >
             Contact
           </NavLink>
