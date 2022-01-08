@@ -2,7 +2,7 @@ import React from "react"
 
 function Services() {
   return (
-    <div className="flex md:flex-row md:justify-evenly flex-col flex-wrap items-center py-6 md:pt-24 bg-gray-100  ">
+    <div className="flex md:flex-row md:justify-evenly flex-col flex-wrap items-center py-6 md:pt-24 bg-white  ">
       {/* section 1 */}
       <div
         id="service4.1"
