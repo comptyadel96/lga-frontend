@@ -237,7 +237,7 @@ function Navbar() {
                 className={(navData) =>
                   navData.isActive
                     ? burgerActiveStyle
-                    : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                    : "text-gray-600 font-semibold text-xl px-3 py-3  relative"
                 }
                 to="/RejoignezNous"
                 onClick={() => {
@@ -430,7 +430,7 @@ function Navbar() {
                   to={`Services${service.hash}`}
                   smooth
                   key={index}
-                  className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-gray-700"
+                  className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
                 >
                   {service.label}
                 </HashLink>
@@ -461,7 +461,7 @@ function Navbar() {
                   to={`Formations${formation.hash}`}
                   smooth
                   key={index}
-                  className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-gray-700"
+                  className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-pink-400"
                 >
                   {formation.label}
                 </HashLink>
@@ -503,7 +503,7 @@ function Navbar() {
                   key={index}
                   to={`RejoignezNous${join.hash}`}
                   smooth
-                  className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-gray-700"
+                  className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-cyan-500"
                 >
                   {join.label}
                 </HashLink>
