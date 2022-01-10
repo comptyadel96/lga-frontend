@@ -85,7 +85,7 @@ function Navbar() {
     },
   ]
   const activeStyle = "text-red-600 text-base font-semibold  px-3 py-1"
-  const burgerActiveStyle = "text-red-600 text-xl font-semibold  px-3 py-3"
+  const burgerActiveStyle = "text-red-600 text-xl font-semibold border-b   px-3 py-3"
   return (
     <div className="w-screen relative h-4">
       <div className="flex items-center justify-between h-24 bg-gray-50 border-b">
@@ -119,14 +119,14 @@ function Navbar() {
       {/* menu burger content */}
       <div
         ref={burgerNavRef}
-        className=" max-h-0 w-screen overflow-hidden  bg-white z-10 transition-all duration-700 ease-linear "
+        className=" max-h-0 w-screen overflow-hidden  bg-white z-30 transition-all duration-700 ease-linear "
       >
         <div className="bg-white w-full flex flex-col lg:hidden">
           <NavLink
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b bg-white z-30   relative"
             }
             to="/"
             onClick={() => {
@@ -140,7 +140,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative"
             }
             to="/APropos"
             onClick={() => {
@@ -150,13 +150,13 @@ function Navbar() {
           >
             A Propos
           </NavLink>
-          <div className="flex flex-col   pr-5 border-b ">
-            <div className=" flex items-center justify-between w-full">
+          <div className="flex flex-col   pr-5 ">
+            <div className=" flex items-center border-b justify-between w-full">
               <NavLink
                 className={(navData) =>
                   navData.isActive
                     ? burgerActiveStyle
-                    : "text-gray-600  font-semibold text-xl px-3 py-3  relative"
+                    : "text-gray-600  font-semibold text-xl px-3 py-3   relative"
                 }
                 to="/Formations"
                 onClick={() => {
@@ -368,11 +368,11 @@ function Navbar() {
       </div>
 
       {/* horizontal navbar */}
-      <div className="lg:flex  lg:items-center   lg:flex-wrap  lg:w-full  py-4 fixed top-0 left-0 bg-gray-50 border-b  hidden  ">
+      <div className="lg:flex  lg:items-center   lg:flex-wrap  lg:w-full  py-4 fixed top-0 left-0 bg-gray-50 border-b z-10  hidden  ">
         <img
           alt="LGA subIcon"
           src="/images/logo-lga.png"
-          className="lg:h-10 mx-4 self-start "
+          className="lg:h-14 mx-4 self-start "
         />
         <nav className="flex items-center flex-wrap   py-4">
           <NavLink

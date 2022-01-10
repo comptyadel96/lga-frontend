@@ -8,7 +8,7 @@ function Services() {
         id="service4.1"
         className="md:flex flex-col my-14  items-center bg-white shadow-lg mx-6"
       >
-        <img alt="iso" src="images/iso.png" className="lg:max-h-80  max-h-72" />
+       
         <section className="my-4  mx-3">
           <h1 className="md:text-2xl text-gray-700 font-bold">
             I-Systèmes de Management et certifications ISO
@@ -47,11 +47,7 @@ function Services() {
         id="service4.2"
         className="md:flex flex-col my-14  items-center bg-white shadow-lg mx-6"
       >
-        <img
-          alt="iso"
-          src="images/cover-rh.png"
-          className="lg:max-h-80 max-h-72"
-        />
+        
         <section className="my-4  mx-3  ">
           <h1 className="md:text-2xl text-gray-700 font-bold">
             II-Management des Ressources Humaines
@@ -84,11 +80,7 @@ function Services() {
         id="service4.3"
         className="md:flex flex-col my-14  items-center bg-white shadow-lg mx-6"
       >
-        <img
-          alt="iso"
-          src="images/cover-finance.png"
-          className="lg:max-h-80  max-h-72"
-        />
+    
         <section className="my-4  mx-3">
           <h1 className="md:text-2xl text-gray-700 font-bold">
             III-Finances et Comptabilité
@@ -135,11 +127,7 @@ function Services() {
         id="service4.4"
         className="md:flex flex-col my-14  items-center bg-white shadow-lg mx-6"
       >
-        <img
-          alt="iso"
-          src="images/informatique.png"
-          className="lg:max-h-80  max-h-72"
-        />
+      
         <section className="my-4  mx-3">
           <h1 className="md:text-2xl text-gray-700 font-bold">
             IV-Informatique et Systèmes d’information
