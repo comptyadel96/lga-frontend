@@ -38,7 +38,8 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      
+      myPink:"#FFD2D2",
+      myChocolate:"#B27272",
     }),
     columns: {
       auto: "auto",

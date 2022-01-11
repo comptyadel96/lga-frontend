@@ -2,12 +2,13 @@ import React from "react"
 
 function App() {
   return (
-    <div className="lg:py-36 xl:py-20 -z-10 pt-20 px-4 bg-gray-100  min-h-screen  ">
+    <div className="lg:py-36 xl:py-20 -z-10 pt-20 px-4 bg-white  min-h-screen  ">
       {/* Intro */}
-        <img alt="acceil lga" className="md:max-w-lg max-w-sm" src="/images/acceuil.png" />
+        <img alt="acceil lga" className="md:max-w-lg md:mt-6 max-w-sm md:mx-auto -ml-2 mt-1  " src="/images/acceuil.png" />
+      
       {/* sections */}
       {/* A propos */}
-      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   md:mx-auto md:my-24 my-6 px-3 py-2 md:flex-row border w-full md:w-2/3 md:justify-around">
+      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">
         <img
           className="md:h-72 h-60"
           alt="laptop pc"
@@ -26,7 +27,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-3 px-3 py-2 md:flex-row border md:w-2/3 md:justify-around">
+      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">
         <div className="flex flex-col items-center max-w-md">
           <h1 className="text-2xl md:text-3xl text-gray-700 font-semibold md:mb-3 mb-2">
             Rejoignez nous
@@ -45,7 +46,7 @@ function App() {
         />
       </div>
       {/* formation */}
-      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row border md:w-2/3 md:justify-around">
+      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">
         <img
           className="md:h-72 h-60"
           alt="laptop pc"
@@ -64,7 +65,7 @@ function App() {
         </div>
       </div>
       {/* comptabilité  */}
-      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row border md:w-2/3 md:justify-around">
+      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">
         <div className="flex flex-col items-center max-w-md">
           <h1 className="text-2xl md:text-3xl text-gray-700 font-semibold md:mb-3 mb-2">
             Services
@@ -83,7 +84,7 @@ function App() {
         />
       </div>
       {/* contact us */}
-      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row border md:w-2/3 md:justify-around">
+      <div className="flex items-center flex-col bg-white rounded-2xl shadow-xl   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">
         <img
           className="md:h-72 h-60"
           alt="contact us"
