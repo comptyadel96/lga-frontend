@@ -84,16 +84,17 @@ function Navbar() {
       hash: "#join2",
     },
   ]
-  const activeStyle = "text-red-600 text-base font-semibold  px-3 py-1"
-  const burgerActiveStyle = "text-red-600 text-xl font-semibold border-b   px-3 py-3"
+  const activeStyle = "text-red-700 text-base font-semibold  px-3 py-1"
+  const burgerActiveStyle = "text-red-500 text-xl font-semibold border-b   px-3 py-3"
   return (
-    <div className="w-screen relative h-4">
-      <div className="flex items-center justify-between h-24 bg-gray-50 border-b">
+    <div className="w-screen relative top-0 h-4">
+      {/* menu burger */}
+      <div className="flex items-center justify-between h-24 w-full  bg-gradient-to-br  from-sky-400 to-sky-800  border-b lg:hidden">
         {/* brand */}
         <img
           alt="LGA subIcon"
-          src="/images/logo-lga.png"
-          className="lg:hidden h-14 ml-4"
+          src="/images/logo-gray.png"
+          className="lg:hidden h-20 ml-4"
         />
         {/* menu burger icon */}
         {!burgerOpened ? (
@@ -121,7 +122,7 @@ function Navbar() {
         ref={burgerNavRef}
         className=" max-h-0 w-screen overflow-hidden  bg-white z-30 transition-all duration-700 ease-linear "
       >
-        <div className="bg-white w-full flex flex-col lg:hidden">
+        <div className="bg-white w-full flex flex-col  lg:hidden">
           <NavLink
             className={(navData) =>
               navData.isActive
@@ -368,18 +369,18 @@ function Navbar() {
       </div>
 
       {/* horizontal navbar */}
-      <div className="lg:flex  lg:items-center   lg:flex-wrap  lg:w-full  py-4 fixed top-0 left-0 bg-gray-50 border-b z-10  hidden  ">
+      <div className="lg:flex  lg:items-center justify-center    lg:w-full  py-2  bg-gradient-to-r  from-sky-600 to-sky-300  z-10  hidden  ">
         <img
           alt="LGA subIcon"
-          src="/images/logo-lga.png"
-          className="lg:h-14 mx-4 self-start "
+          src="/images/logo-white.png"
+          className="lg:h-20 mx-4 self-start "
         />
         <nav className="flex items-center flex-wrap   py-4">
           <NavLink
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/"
           >
@@ -389,7 +390,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/APropos"
           >
@@ -399,7 +400,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/Produits"
           >
@@ -415,7 +416,7 @@ function Navbar() {
               className={(navData) =>
                 navData.isActive
                   ? activeStyle
-                  : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400"
+                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
               }
               to="/Services"
             >
@@ -446,7 +447,7 @@ function Navbar() {
               className={(navData) =>
                 navData.isActive
                   ? activeStyle
-                  : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
               }
               to="/Formations"
             >
@@ -472,7 +473,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/OffresEmploi"
           >
@@ -488,7 +489,7 @@ function Navbar() {
               className={(navData) =>
                 navData.isActive
                   ? activeStyle
-                  : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
               }
               to="/RejoignezNous"
             >
@@ -514,7 +515,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/Contact"
           >
@@ -524,12 +525,12 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-gray-500 font-semibold text-base px-3 py-1 hover:text-gray-400 relative"
+                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
             }
             to="/LgaConsulting"
           >
             LGA Consulting Blog
-          </NavLink>{" "}
+          </NavLink>
         </nav>
       </div>
     </div>

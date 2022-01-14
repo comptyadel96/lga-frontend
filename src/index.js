@@ -12,6 +12,7 @@ import OffresEmploi from "./pages/OffresEmploi"
 import Produits from "./pages/Produits"
 import RejoignezNous from "./pages/RejoignezNous"
 import Services from "./pages/Services"
+import Carrousel from "./components/Carrousel"
 ReactDOM.render(
   <BrowserRouter>
     <Navbar />
@@ -27,5 +28,6 @@ ReactDOM.render(
       <Route path="Services" element={<Services />}></Route>
     </Routes>
   </BrowserRouter>,
+
   document.getElementById("root")
 )
