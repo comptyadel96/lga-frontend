@@ -4,7 +4,7 @@ import Carrousel from "./components/Carrousel"
 function App() {
   return (
     <div className="  px-4 bg-white  min-h-screen md:py-10 py-20  ">
-      {/*  carroussel*/}
+      {/*  carroussel test */}
       <Carrousel />
       
       {/* sections */}

@@ -42,7 +42,7 @@ module.exports = {
       myChocolate:"#B27272",
       myRed:"#EF4136",
       transparentBlack:"rgba(0,0,0,0.5)",
-      transparentBlack2:"rgba(0,0,0,0.8)",
+      transparentBlack2:"rgba(0,0,0,0.8)",  
     }),
     columns: {
       auto: "auto",
