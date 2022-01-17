@@ -9,7 +9,7 @@ import {
 import { NavLink } from "react-router-dom"
 function Footer() {
   return (
-    <div className=" flex flex-col items-center justify-evenly flex-wrap mt-auto md:flex-row bg-gray-800  py-2 pr-3 w-screen">
+    <div className=" flex flex-col items-center justify-evenly flex-wrap mt-auto md:flex-row bg-gray-800  py-2  w-full">
       {/* infos and social links */}
       <div className="flex flex-col items-center mx-10 max-w-md">
         <img

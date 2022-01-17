@@ -10,6 +10,7 @@ import {
   AiFillInstagram,
   AiFillFacebook,
 } from "react-icons/ai"
+import DropDown from "./DropDown"
 function Navbar() {
   const serviceRef = useRef(null)
   const formationRef = useRef(null)
@@ -89,6 +90,7 @@ function Navbar() {
     },
   ]
   const activeStyle = "text-red-700 text-base font-semibold  px-3 py-1"
+  const activeStyle2 = "text-red-700 text-base font-semibold"
   const burgerActiveStyle =
     "text-red-500 text-xl font-semibold border-b z-50 bg-white   px-3 py-3"
   // transtion for navbar on scroll down
@@ -103,7 +105,7 @@ function Navbar() {
     }
   })
   return (
-    <div className="w-screen   relative ">
+    <div className="w-full px-0  relative ">
       {/* mini nav */}
       <div className=" lg:h-6 bg-blue-800 w-full lg:flex md:items-center lg:justify-between px-8 hidden z-50 ">
         <div className="inline-flex">
@@ -443,11 +445,11 @@ function Navbar() {
             onMouseEnter={() => toggleMenu(serviceRef)}
             onMouseLeave={() => toggleMenu(serviceRef)}
           >
-            <div className="flex items-center">
+            <div className="flex items-center px-3 py-1">
               <NavLink
                 className={(navData) =>
                   navData.isActive
-                    ? activeStyle
+                    ? activeStyle2
                     : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
                 }
                 to="/Services"
@@ -479,11 +481,11 @@ function Navbar() {
             onMouseEnter={() => toggleMenu(formationRef)}
             onMouseLeave={() => toggleMenu(formationRef)}
           >
-            <div className="flex items-center px-3 py-1">
+            <div className="flex items-center px-3 py-1  ">
               <NavLink
                 className={(navData) =>
                   navData.isActive
-                    ? activeStyle
+                    ? activeStyle2
                     : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
                 }
                 to="/Formations"
@@ -529,7 +531,7 @@ function Navbar() {
               <NavLink
                 className={(navData) =>
                   navData.isActive
-                    ? activeStyle
+                    ? activeStyle2
                     : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
                 }
                 to="/RejoignezNous"
@@ -575,6 +577,10 @@ function Navbar() {
           >
             LGA Consulting Blog
           </NavLink>
+          {/* dropdown */}
+          <div>
+            <DropDown />
+          </div>
         </nav>
       </div>
     </div>
