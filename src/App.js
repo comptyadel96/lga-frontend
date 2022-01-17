@@ -3,10 +3,10 @@ import Carrousel from "./components/Carrousel"
 
 function App() {
   return (
-    <div className="  px-4 bg-white  min-h-screen md:py-10 py-20  ">
+    <div className="px-4 md:px-0 bg-white  min-h-screen relative   ">
       {/*  carroussel test */}
       <Carrousel />
-      
+
       {/* sections */}
       {/* formation */}
       <div className="flex items-center flex-col bg-white rounded-2xl shadow-lg   mx-auto md:my-24 my-6 px-3 py-2 md:flex-row  md:w-2/3 md:justify-around">

@@ -2,8 +2,8 @@ import React from "react"
 
 function LgaConsultingBlog() {
   return (
-    <div>
-      <h1>LGA Consulting Blog</h1>
+    <div className="h-screen w-full lg:mt-20">
+      <h1>LGA consulting blog</h1>
     </div>
   )
 }

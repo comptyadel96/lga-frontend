@@ -6,11 +6,15 @@ import {
   AiOutlineCaretDown,
   AiOutlineCaretUp,
   AiOutlineClose,
+  AiFillLinkedin,
+  AiFillInstagram,
+  AiFillFacebook,
 } from "react-icons/ai"
 function Navbar() {
   const serviceRef = useRef(null)
   const formationRef = useRef(null)
   const joinRef = useRef(null)
+  const navRef = useRef(null)
   const burgerNavRef = useRef(null)
   // toggle arrow on click
   const [isOpen, setIsOpen] = useState(false)
@@ -85,16 +89,40 @@ function Navbar() {
     },
   ]
   const activeStyle = "text-red-700 text-base font-semibold  px-3 py-1"
-  const burgerActiveStyle = "text-red-500 text-xl font-semibold border-b   px-3 py-3"
+  const burgerActiveStyle =
+    "text-red-500 text-xl font-semibold border-b z-50 bg-white   px-3 py-3"
+  // transtion for navbar on scroll down
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      navRef.current.classList.remove("top-6")
+      navRef.current.classList.add("top-0")
+    } else {
+      navRef.current.classList.remove("top-0")
+      navRef.current.classList.add("top-6")
+    }
+  })
   return (
-    <div className="w-screen relative top-0 h-4">
+    <div className="w-screen   relative ">
+      {/* mini nav */}
+      <div className=" lg:h-6 bg-blue-800 w-full lg:flex md:items-center lg:justify-between px-8 hidden z-50 ">
+        <div className="inline-flex">
+          <p className="text-white">Contact@lga-consulting.com</p>
+          <p className="text-white ml-4">+213 541 465 922</p>
+        </div>
+        <div className="inline-flex">
+          <AiFillLinkedin className="text-2xl text-white mx-1" />
+          <AiFillInstagram className="text-2xl text-white mx-1" />
+          <AiFillFacebook className="text-2xl text-white mx-1" />
+        </div>
+      </div>
       {/* menu burger */}
-      <div className="flex items-center justify-between h-24 w-full  bg-gradient-to-br  from-sky-400 to-sky-800  border-b lg:hidden">
+      <div className="flex items-center justify-between h-24 w-full  bg-gray-50 border-b  lg:hidden">
         {/* brand */}
         <img
           alt="LGA subIcon"
           src="/images/logo-gray.png"
-          className="lg:hidden h-20 ml-4"
+          className="lg:hidden h-16 ml-4"
         />
         {/* menu burger icon */}
         {!burgerOpened ? (
@@ -120,14 +148,14 @@ function Navbar() {
       {/* menu burger content */}
       <div
         ref={burgerNavRef}
-        className=" max-h-0 w-screen overflow-hidden  bg-white z-30 transition-all duration-700 ease-linear "
+        className=" max-h-0 w-screen overflow-hidden  bg-white z-50 transition-all duration-700 ease-linear "
       >
         <div className="bg-white w-full flex flex-col  lg:hidden">
           <NavLink
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b bg-white z-30   relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative"
             }
             to="/"
             onClick={() => {
@@ -151,13 +179,13 @@ function Navbar() {
           >
             A Propos
           </NavLink>
-          <div className="flex flex-col   pr-5 ">
-            <div className=" flex items-center border-b justify-between w-full">
+          <div className="flex flex-col   pr-5  bg-white z-50">
+            <div className=" flex items-center justify-between w-full">
               <NavLink
                 className={(navData) =>
                   navData.isActive
                     ? burgerActiveStyle
-                    : "text-gray-600  font-semibold text-xl px-3 py-3   relative"
+                    : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
                 }
                 to="/Formations"
                 onClick={() => {
@@ -169,7 +197,7 @@ function Navbar() {
               </NavLink>
               {!isOpen ? (
                 <AiOutlineCaretDown
-                  className="text-blue-500 bg-blue-100 rounded-md p-1"
+                  className="text-blue-500 bg-blue-100 rounded-md p-1 z-50  "
                   size={25}
                   onClick={() => {
                     toggleMenu(subFormationsRef)
@@ -178,7 +206,7 @@ function Navbar() {
                 />
               ) : (
                 <AiOutlineCaretUp
-                  className="text-red-500 bg-red-100 rounded-md p-1"
+                  className="text-red-500 bg-red-100 rounded-md p-1 z-50"
                   size={25}
                   onClick={() => {
                     toggleMenu(subFormationsRef)
@@ -208,7 +236,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
             }
             to="/OffresEmploi"
             onClick={() => {
@@ -222,7 +250,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
             }
             to="/Produits"
             onClick={() => {
@@ -232,13 +260,13 @@ function Navbar() {
           >
             Produits
           </NavLink>
-          <div className="flex flex-col   pr-5 border-b ">
+          <div className="flex flex-col   pr-5 border-b bg-white z-50 ">
             <div className=" flex items-center justify-between w-full">
               <NavLink
                 className={(navData) =>
                   navData.isActive
                     ? burgerActiveStyle
-                    : "text-gray-600 font-semibold text-xl px-3 py-3  relative"
+                    : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
                 }
                 to="/RejoignezNous"
                 onClick={() => {
@@ -250,7 +278,7 @@ function Navbar() {
               </NavLink>
               {!isOpen3 ? (
                 <AiOutlineCaretDown
-                  className="text-blue-500 bg-blue-100 rounded-md p-1"
+                  className="text-blue-500 bg-blue-100 rounded-md p-1 z-50  "
                   size={25}
                   onClick={() => {
                     toggleMenu(subJoinRef)
@@ -259,7 +287,7 @@ function Navbar() {
                 />
               ) : (
                 <AiOutlineCaretUp
-                  className="text-red-500 bg-red-100 rounded-md p-1"
+                  className="text-red-500 bg-red-100 rounded-md p-1 z-50"
                   size={25}
                   onClick={() => {
                     toggleMenu(subJoinRef)
@@ -285,13 +313,13 @@ function Navbar() {
             </div>
           </div>
 
-          <div className="flex flex-col   pr-5 border-b ">
-            <div className=" flex items-center justify-between w-full">
+          <div className="flex flex-col   pr-5 border-b bg-white z-50">
+            <div className=" flex items-center justify-between w-full bg-white z-50 ">
               <NavLink
                 className={(navData) =>
                   navData.isActive
                     ? burgerActiveStyle
-                    : "text-gray-600  font-semibold text-xl px-3 py-3  relative"
+                    : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
                 }
                 to="/Services"
                 onClick={() => {
@@ -303,7 +331,7 @@ function Navbar() {
               </NavLink>
               {!isOpen2 ? (
                 <AiOutlineCaretDown
-                  className="text-blue-500 bg-blue-100 rounded-md p-1"
+                  className="text-blue-500 bg-blue-100 rounded-md p-1 z-50"
                   size={25}
                   onClick={() => {
                     toggleMenu(subServiceRef)
@@ -312,7 +340,7 @@ function Navbar() {
                 />
               ) : (
                 <AiOutlineCaretUp
-                  className="text-red-500 bg-red-100 rounded-md p-1"
+                  className="text-red-500 bg-red-100 rounded-md p-1 z-50"
                   size={25}
                   onClick={() => {
                     toggleMenu(subServiceRef)
@@ -341,7 +369,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b  relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
             }
             to="/LgaConsulting"
             onClick={() => {
@@ -355,7 +383,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? burgerActiveStyle
-                : "text-gray-600 font-semibold text-xl px-3 py-3   relative"
+                : "text-gray-600 font-semibold text-xl px-3 py-3 border-b z-30 bg-white relative w-full"
             }
             to="/Contact"
             onClick={() => {
@@ -369,18 +397,21 @@ function Navbar() {
       </div>
 
       {/* horizontal navbar */}
-      <div className="lg:flex  lg:items-center justify-center    lg:w-full  py-2  bg-gradient-to-r  from-sky-600 to-sky-300  z-10  hidden  ">
+      <div
+        ref={navRef}
+        className="lg:flex lg:items-center justify-center fixed top-6 lg:w-full  py-1 border-b bg-gray-50 shadow-md  z-50  hidden transition-all duration-500 "
+      >
         <img
           alt="LGA subIcon"
-          src="/images/logo-white.png"
-          className="lg:h-20 mx-4 self-start "
+          src="/images/logo-gray.png"
+          className="lg:h-16 mr-14 self-start "
         />
         <nav className="flex items-center flex-wrap   py-4">
           <NavLink
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/"
           >
@@ -390,7 +421,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/APropos"
           >
@@ -400,7 +431,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/Produits"
           >
@@ -412,18 +443,23 @@ function Navbar() {
             onMouseEnter={() => toggleMenu(serviceRef)}
             onMouseLeave={() => toggleMenu(serviceRef)}
           >
-            <NavLink
-              className={(navData) =>
-                navData.isActive
-                  ? activeStyle
-                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
-              }
-              to="/Services"
-            >
-              Services
-            </NavLink>
+            <div className="flex items-center">
+              <NavLink
+                className={(navData) =>
+                  navData.isActive
+                    ? activeStyle
+                    : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
+                }
+                to="/Services"
+              >
+                Services
+              </NavLink>
+
+              <AiOutlineCaretDown className="pt-1" />
+            </div>
+
             <div
-              className="absolute w-80  bg-blue-700 max-h-0 overflow-hidden transition-all duration-700  rounded-2xl z-10"
+              className="absolute w-80  bg-gray-800 max-h-0 overflow-hidden transition-all duration-700  rounded-md z-10"
               ref={serviceRef}
             >
               {serviceLinks.map((service, index) => (
@@ -443,18 +479,22 @@ function Navbar() {
             onMouseEnter={() => toggleMenu(formationRef)}
             onMouseLeave={() => toggleMenu(formationRef)}
           >
-            <NavLink
-              className={(navData) =>
-                navData.isActive
-                  ? activeStyle
-                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
-              }
-              to="/Formations"
-            >
-              Formations
-            </NavLink>
+            <div className="flex items-center px-3 py-1">
+              <NavLink
+                className={(navData) =>
+                  navData.isActive
+                    ? activeStyle
+                    : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
+                }
+                to="/Formations"
+              >
+                Formations
+              </NavLink>
+              <AiOutlineCaretDown className="pt-1" />
+            </div>
+
             <div
-              className="absolute w-44   bg-pink-900 overflow-hidden transition-all duration-700 max-h-0 rounded-2xl z-10"
+              className="absolute w-44   bg-gray-800 overflow-hidden transition-all duration-700 max-h-0 rounded-2xl z-10"
               ref={formationRef}
             >
               {formationLinks.map((formation, index) => (
@@ -462,7 +502,7 @@ function Navbar() {
                   to={`Formations${formation.hash}`}
                   smooth
                   key={index}
-                  className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-pink-400"
+                  className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
                 >
                   {formation.label}
                 </HashLink>
@@ -473,7 +513,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/OffresEmploi"
           >
@@ -485,18 +525,22 @@ function Navbar() {
             onMouseEnter={() => toggleMenu(joinRef)}
             onMouseLeave={() => toggleMenu(joinRef)}
           >
-            <NavLink
-              className={(navData) =>
-                navData.isActive
-                  ? activeStyle
-                  : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
-              }
-              to="/RejoignezNous"
-            >
-              Rejoignez nous
-            </NavLink>
+            <div className="flex items-center px-3 py-1">
+              <NavLink
+                className={(navData) =>
+                  navData.isActive
+                    ? activeStyle
+                    : "text-gray-800 font-semibold text-base  hover:text-blue-700 relative"
+                }
+                to="/RejoignezNous"
+              >
+                Rejoignez nous
+              </NavLink>
+              <AiOutlineCaretDown className="pt-1" />
+            </div>
+
             <div
-              className="absolute w-44  bg-cyan-900 max-h-0 rounded-2xl overflow-hidden transition-all duration-700 z-10"
+              className="absolute w-44  bg-gray-800 max-h-0 rounded-2xl overflow-hidden transition-all duration-700 z-10"
               ref={joinRef}
             >
               {joinLinks.map((join, index) => (
@@ -504,7 +548,7 @@ function Navbar() {
                   key={index}
                   to={`RejoignezNous${join.hash}`}
                   smooth
-                  className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-cyan-500"
+                  className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
                 >
                   {join.label}
                 </HashLink>
@@ -515,7 +559,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/Contact"
           >
@@ -525,7 +569,7 @@ function Navbar() {
             className={(navData) =>
               navData.isActive
                 ? activeStyle
-                : "text-white font-semibold text-base px-3 py-1 hover:text-gray-700 relative"
+                : "text-gray-800 font-semibold text-base px-3 py-1 hover:text-blue-700 relative"
             }
             to="/LgaConsulting"
           >

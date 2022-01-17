@@ -20,7 +20,7 @@ function Carrousel() {
       return (
         <div
           onClick={click}
-          className="w-8 h-8 md:h-10 md:w-10 rounded-full flex  justify-center items-center p-1 z-40 bg-white  absolute right-1 top-1/2 cursor-pointer "
+          className="w-8 h-8 md:h-10 md:w-10 rounded-full flex  justify-center items-center p-1 z-30 bg-white  absolute right-1 top-1/2 cursor-pointer "
         >
           <AiOutlineArrowRight className="text-blue-700" />
         </div>
@@ -31,7 +31,7 @@ function Carrousel() {
       return (
         <div
           onClick={click}
-          className="w-8 h-8 md:h-10 md:w-10 rounded-full flex justify-center items-center p-1 z-40 bg-white absolute left-1 top-1/2 cursor-pointer"
+          className="w-8 h-8 md:h-10 md:w-10 rounded-full flex justify-center items-center p-1 z-30 bg-white absolute left-1 top-1/2 cursor-pointer"
         >
           <AiOutlineArrowLeft className="text-blue-700" />
         </div>
@@ -39,9 +39,8 @@ function Carrousel() {
     }
   }
   return (
-    <div className=" lg:w-1/2 mx-auto relative ">
+    <div className="mx-auto relative lg:mt-16  ">
       <Carousel
-        className=" md:my-14  my-1 "
         swipeable
         showStatus={false}
         showThumbs={false}
@@ -55,8 +54,12 @@ function Carrousel() {
         renderArrowPrev={(click, hasPrev) => prev(click, hasPrev)}
       >
         <div className="relative">
-          <img src="images/grh.png" alt="grh" />
-          <div className="absolute inset-0 flex flex-col items-center bg-transparentBlack">
+          <img
+            src="images/paysage-campagne.jpg"
+            alt="grh"
+            className="max-h-max"
+          />
+          <div className="absolute inset-0 flex flex-col items-center bg-transparentBlack2">
             <h1 className="text-2xl text-white font-bold md:text-5xl mt-4 md:mt-16">
               Titre ici ...
             </h1>
@@ -70,7 +73,11 @@ function Carrousel() {
         </div>
 
         <div className="relative">
-          <img src="images/iso-1.png" alt="comp" />
+          <img
+            src="images/paysage-campagne.jpg"
+            alt="comp"
+            className="max-h-max"
+          />
           <div className="absolute inset-0 flex flex-col items-center   bg-transparentBlack">
             <h1 className="text-2xl text-white font-bold md:text-5xl mt-4 md:mt-16">
               Titre ici ...
@@ -81,7 +88,11 @@ function Carrousel() {
           </div>
         </div>
         <div className="relative">
-          <img src="images/comptabilité.png" alt="comp" />
+          <img
+            src="images/paysage-campagne.jpg"
+            alt="comp"
+            className="max-h-max"
+          />
           <div className="absolute inset-0 flex flex-col items-center   bg-transparentBlack">
             <h1 className="text-2xl text-white font-bold md:text-5xl mt-4 md:mt-16">
               Titre ici ...

@@ -12,6 +12,8 @@ import OffresEmploi from "./pages/OffresEmploi"
 import Produits from "./pages/Produits"
 import RejoignezNous from "./pages/RejoignezNous"
 import Services from "./pages/Services"
+import Footer from "./components/Footer"
+
 ReactDOM.render(
   <BrowserRouter>
     <Navbar />
@@ -26,6 +28,7 @@ ReactDOM.render(
       <Route path="RejoignezNous" element={<RejoignezNous />}></Route>
       <Route path="Services" element={<Services />}></Route>
     </Routes>
+    <Footer />
   </BrowserRouter>,
 
   document.getElementById("root")
