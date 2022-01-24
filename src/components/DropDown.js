@@ -20,7 +20,7 @@ function DropDown() {
     <div className="flex items-center relative px-3 cursor-pointer" onClick={toggleDropdown}>
       {/* dropdown */}
       <div>
-        <p className="font-semibold text-red-500 hover:text-blue-700 ">
+        <p className="font-semibold text-red-700 hover:text-blue-700 ">
           {selected}
         </p>
         <div
@@ -41,7 +41,7 @@ function DropDown() {
         </div>
       </div>
       {/* icon */}
-      <GrLanguage className="text-red-500 ml-1" size={13} />
+      <GrLanguage className="ml-1" size={13} />
     </div>
   )
 }

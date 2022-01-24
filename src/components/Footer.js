@@ -11,21 +11,25 @@ function Footer() {
   return (
     <div className=" flex flex-col items-center justify-evenly flex-wrap mt-auto md:flex-row bg-gray-800  py-2  w-full">
       {/* infos and social links */}
-      <div className="flex flex-col items-center mx-10 max-w-md">
+      <div className="flex flex-col items-center mx-10 max-w-sm">
         <img
           alt="logo lga"
           src="/images/logo-white.png"
           className="h-14 md:h-16 mx-4"
         />
         <p className="text-white text-center my-1">
-          Société de conseils et d'assistances au entreprises en matiére
-          Gestion,Planification,Organisations,Audits,Controle et développement
-          informatique.
+          LGA Consulting, Société de conseils et d'assistance aux entreprises en
+          matiére de développement Informatique, Management, Organisation,
+          Formations et Audits
         </p>
       </div>
       {/* racourcis */}
-      <div className="flex flex-col md:flex-row  items-center flex-wrap">
-        <NavLink to="/" className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500">
+      <div className="flex flex-col  items-center flex-wrap">
+        <h1 className="text-2xl text-blue-400 font-semibold">Raccourci</h1>
+        <NavLink
+          to="/"
+          className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
+        >
           Acceuil
         </NavLink>
         <NavLink
@@ -41,10 +45,16 @@ function Footer() {
           Produits
         </NavLink>
         <NavLink
+          to="/Services"
+          className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
+        >
+          Services
+        </NavLink>
+        <NavLink
           to="/Formations"
           className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
         >
-          Formations{" "}
+          Formations
         </NavLink>
         <NavLink
           to="/OffresEmploi"
@@ -58,24 +68,23 @@ function Footer() {
         >
           Rejoignez-nous
         </NavLink>
-        <NavLink
-          to="/Contact"
-          className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
-        >
-          Contact
-        </NavLink>
+
         <NavLink
           to="/LgaConsulting"
           className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
         >
           LGA Consulting blog
         </NavLink>
+        <NavLink
+          to="/Contact"
+          className="text-gray-300 max-w-md mx-1 cursor-pointer hover:text-red-500"
+        >
+          Contact
+        </NavLink>
       </div>
       {/* Contact */}
       <div className="flex flex-col items-center mx-4">
-        <p className="md:text-2xl text-2xl text-blue-400 font-semibold">
-          Contacts
-        </p>
+        <p className="text-2xl text-blue-400 font-semibold">Contacts</p>
         <p className="text-white">Adresse : Bouira, Algérie. </p>
         <div className="flex items-center">
           <AiFillPhone className="text-white md:text-3xl text-xl " />

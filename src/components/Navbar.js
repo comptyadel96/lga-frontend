@@ -427,7 +427,7 @@ function Navbar() {
             }
             to="/APropos"
           >
-            A Propos
+            A propos
           </NavLink>
           <NavLink
             className={(navData) =>
@@ -536,7 +536,7 @@ function Navbar() {
                 }
                 to="/RejoignezNous"
               >
-                Rejoignez nous
+                Rejoignez-nous
               </NavLink>
               <AiOutlineCaretDown className="pt-1" />
             </div>
