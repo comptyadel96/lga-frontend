@@ -4,17 +4,12 @@ function Contact() {
   return (
     <div className="h-full w-full lg:mt-20 bg-gray-100">
       {/* header */}
-      <div className="relative  object-scale-down max-w-full -mt-1 overflow-hidden md:mb-12">
+      <div className="relative  object-scale-down max-w-6xl -mt-1 overflow-hidden md:mb-12 mx-auto">
         <div className="flex flex-col items-center absolute top-0 -right-10 bottom-0 bg-blue-900 skew-x-[16deg] lg:w-3/4 px-3 max-w-full overflow-hidden  ">
-          <h1 className="text-white font-semibold lg:text-4xl md:text-2xl md:mt-8 mx-1 text-base -skew-x-[16deg] md:max-w-2xl lg:max-w-3xl">
-            LGA Consulting, Société de conseils et d'assistance aux entreprises
-            en matiére de développement Informatique, Management, Organisation,
-            Formations et Audits
-          </h1>
-          <h1 className="lg:text-5xl md:text-4xl text-md  lg:mt-28 mt-4 lg:py-2   md:px-4 px-2  text-white  md:font-bold font-semibold -skew-x-[16deg] rounded-full  bg-gray-800">
+          <h1 className="lg:text-5xl md:text-4xl text-lg  lg:mt-28 mt-4 lg:py-2   md:px-4 px-2  text-white  md:font-bold font-semibold -skew-x-[16deg] rounded-full  bg-gray-800">
             CONTACTEZ-NOUS
           </h1>
-          <h1 className="text-white md:text-xl md:mt-7 mt-1 -skew-x-[16deg] md:max-w-2xl md:block hidden">
+          <h1 className="text-white font-semibold lg:text-4xl md:text-2xl md:mt-8 mt-2 mr-4 text-base -skew-x-[16deg] md:max-w-2xl lg:max-w-3xl max-w-sm">
             Veuillez remplir le formulaire ci-dessous en complétant tous les
             champs requis. Nous vous contacterons dès que possible.
           </h1>
@@ -25,10 +20,6 @@ function Contact() {
           className="object-contain -z-10"
         />
       </div>
-      <p className="md:hidden mx-1 text-red-700 text-center font-semibold">
-        Veuillez remplir le formulaire ci-dessous en complétant tous les champs
-        requis. Nous vous contacterons dès que possible.
-      </p>
       {/* formulaire */}
       <div className="flex  items-center justify-around flex-wrap max-w-full md:mt-10 py-3">
         <input

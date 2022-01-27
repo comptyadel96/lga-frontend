@@ -44,6 +44,7 @@ module.exports = {
       transparentBlack: "rgba(0,0,0,0.5)",
       transparentBlack2: "rgba(0,0,0,0.7)",
       transparentBlue: "rgba( 30, 64, 175 ,0.8)",
+      transparentWhite: "rgba(255,255,255,0.65)",
     }),
     columns: {
       auto: "auto",

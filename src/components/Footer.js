@@ -96,8 +96,20 @@ function Footer() {
         </div>
         <p className="text-white">Site web : www……</p>
         <div className="inline-flex">
-          <AiFillFacebook className="text-white md:text-3xl text-2xl mt-3 cursor-pointer hover:text-blue-400 " />
-          <AiFillInstagram className="text-white md:text-3xl text-2xl mt-3 cursor-pointer hover:text-pink-400 " />
+          <a
+            href="https://www.facebook.com/LeaderGovernanaceAlgeria/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillFacebook className="text-white md:text-3xl text-2xl mt-3 cursor-pointer hover:text-blue-400 " />
+          </a>
+          <a
+            href="https://instagram.com/lga.leader.governance.algeria?utm_medium=copy_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillInstagram className="text-white md:text-3xl text-2xl mt-3 cursor-pointer hover:text-pink-400 " />
+          </a>
           <AiFillLinkedin className="text-white md:text-3xl text-2xl mt-3 cursor-pointer hover:text-blue-600  " />
         </div>
       </div>

@@ -9,6 +9,8 @@ import {
   AiFillLinkedin,
   AiFillInstagram,
   AiFillFacebook,
+  AiFillPhone,
+  AiFillMail,
 } from "react-icons/ai"
 import DropDown from "./DropDown"
 function Navbar() {
@@ -109,8 +111,14 @@ function Navbar() {
       {/* mini nav */}
       <div className=" lg:h-6 bg-blue-800 w-full lg:flex md:items-center lg:justify-between px-8 hidden z-50 ">
         <div className="inline-flex">
-          <p className="text-white">Contact@lga-consulting.com</p>
-          <p className="text-white ml-4">+213 541 465 922</p>
+          <p className="text-white flex items-center">
+            <AiFillMail className="mr-2" />
+            Contact@lga-consulting.com
+          </p>
+          <p className="text-white ml-4 flex items-center">
+            <AiFillPhone className="mr-2" />
+            +213 541 465 922
+          </p>
         </div>
         <div className="inline-flex">
           <AiFillLinkedin className="text-2xl text-white mx-1" />
