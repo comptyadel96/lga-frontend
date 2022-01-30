@@ -49,8 +49,6 @@ function Navbar() {
     }
   }
 
-  const joinLinks = ["Déposer votre CV", "Devenir partenaire"]
-
   const activeStyle = "text-red-700 text-base font-semibold  px-3 py-1"
   const activeStyle2 = "text-red-700 text-base font-semibold"
   const burgerActiveStyle =
