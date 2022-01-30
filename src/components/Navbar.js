@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { NavLink } from "react-router-dom"
-import { HashLink } from "react-router-hash-link"
+
 import {
   AiOutlineMenu,
   AiOutlineCaretDown,
@@ -49,54 +49,13 @@ function Navbar() {
     }
   }
 
-  const serviceLinks = [
-    {
-      label: "Systèmes de Management et certifications ISO",
-      hash: "#service4.1",
-    },
-    {
-      label: "Management des Ressources Humaines",
-      hash: "#service4.2",
-    },
-    {
-      label: "Finances et Comptabilité",
-      hash: "#service4.3",
-    },
-    {
-      label: "Informatique et Systèmes d’information",
-      hash: "#service4.4",
-    },
-  ]
-  const formationLinks = [
-    {
-      label: "Acheter une Formation ",
-      hash: "#formation1",
-    },
-    {
-      label: "Formations en ligne ",
-      hash: "#formation2",
-    },
-    {
-      label: "Demander une Formation ",
-      hash: "#formation3",
-    },
-  ]
-  const joinLinks = [
-    {
-      label: "Déposer votre CV",
-      hash: "#join1",
-    },
-    {
-      label: "Devenir partenaire",
-      hash: "#join2",
-    },
-  ]
+  const joinLinks = ["Déposer votre CV", "Devenir partenaire"]
+
   const activeStyle = "text-red-700 text-base font-semibold  px-3 py-1"
   const activeStyle2 = "text-red-700 text-base font-semibold"
   const burgerActiveStyle =
     "text-red-500 text-xl font-semibold border-b z-50 bg-white   px-3 py-3"
   // transtion for navbar on scroll down
-
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
       navRef.current.classList.remove("top-6")
@@ -230,15 +189,24 @@ function Navbar() {
               className="flex flex-col  bg-gray-100 pl-4 max-h-0 overflow-hidden transition-all duration-500 "
               ref={subFormationsRef}
             >
-              {formationLinks.map((formation, index) => (
-                <HashLink
-                  key={index}
-                  to={`/Formations${formation.hash}`}
-                  className="py-3 text-gray-500 font-semibold text-lg  "
-                >
-                  {formation.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`/AcheterFormation`}
+                className="py-3 text-gray-500 font-semibold text-lg hover:text-blue-600"
+              >
+                Acheter une formation
+              </NavLink>
+              <NavLink
+                to={`/FormationEnLigne`}
+                className="py-3 text-gray-500 font-semibold text-lg hover:text-blue-600"
+              >
+                Formation en ligne
+              </NavLink>
+              <NavLink
+                to={`/DemanderFormation`}
+                className="py-3 text-gray-500 font-semibold text-lg hover:text-blue-600"
+              >
+                Demander une formation
+              </NavLink>
             </div>
           </div>
 
@@ -311,15 +279,18 @@ function Navbar() {
               className="flex flex-col  bg-gray-100 pl-4 max-h-0 overflow-hidden transition-all duration-500 "
               ref={subJoinRef}
             >
-              {joinLinks.map((join, index) => (
-                <HashLink
-                  key={index}
-                  to={`/RejoignezNous${join.hash}`}
-                  className="py-3 text-gray-500 font-semibold text-lg  "
-                >
-                  {join.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`/DeposerCv`}
+                className="py-3 text-gray-500 font-semibold text-lg"
+              >
+                Déposer votre CV
+              </NavLink>
+              <NavLink
+                to={`/DevenirPartenaire`}
+                className="py-3 text-gray-500 font-semibold text-lg"
+              >
+                Devenir Partenaire
+              </NavLink>
             </div>
           </div>
 
@@ -364,15 +335,30 @@ function Navbar() {
               className="flex flex-col  bg-gray-100 pl-4 max-h-0 overflow-hidden  transition-all duration-500"
               ref={subServiceRef}
             >
-              {serviceLinks.map((service, index) => (
-                <HashLink
-                  key={index}
-                  to={`/Services${service.hash}`}
-                  className="py-3 text-gray-500 font-semibold text-lg  "
-                >
-                  {service.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`/management-et-iso`}
+                className="py-3 text-gray-500 font-semibold text-lg  "
+              >
+                Systèmes de Management et certifications ISO
+              </NavLink>
+              <NavLink
+                to={`/grh`}
+                className="py-3 text-gray-500 font-semibold text-lg  "
+              >
+                Management des Ressources Humaines
+              </NavLink>
+              <NavLink
+                to={`/finance-et-comptablité`}
+                className="py-3 text-gray-500 font-semibold text-lg  "
+              >
+                Finances et Comptabilité
+              </NavLink>
+              <NavLink
+                to={`/informatique`}
+                className="py-3 text-gray-500 font-semibold text-lg  "
+              >
+                Informatique et Systèmes d’information
+              </NavLink>
             </div>
           </div>
           <NavLink
@@ -472,16 +458,30 @@ function Navbar() {
               className="absolute w-80  bg-gray-800 max-h-0 overflow-hidden transition-all duration-700  rounded-md z-10"
               ref={serviceRef}
             >
-              {serviceLinks.map((service, index) => (
-                <HashLink
-                  to={`Services${service.hash}`}
-                  smooth
-                  key={index}
-                  className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
-                >
-                  {service.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`/management-et-iso`}
+                className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Systèmes de Management et certifications ISO
+              </NavLink>
+              <NavLink
+                to={`/grh`}
+                className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Management des Ressources Humaines
+              </NavLink>
+              <NavLink
+                to={`/finance-et-comptablité`}
+                className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Finances et Comptabilité
+              </NavLink>
+              <NavLink
+                to={`/informatique`}
+                className="inline-block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Informatique et Systèmes d’information
+              </NavLink>
             </div>
           </div>
           <div
@@ -507,16 +507,24 @@ function Navbar() {
               className="absolute w-44   bg-gray-800 overflow-hidden transition-all duration-700 max-h-0 rounded-2xl z-10"
               ref={formationRef}
             >
-              {formationLinks.map((formation, index) => (
-                <HashLink
-                  to={`Formations${formation.hash}`}
-                  smooth
-                  key={index}
-                  className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
-                >
-                  {formation.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`AcheterFormation`}
+                className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Acheter une Formation
+              </NavLink>
+              <NavLink
+                to={`FormationEnLigne`}
+                className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Formations en ligne
+              </NavLink>
+              <NavLink
+                to={`DemanderFormation`}
+                className="block px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Demander une Formation
+              </NavLink>
             </div>
           </div>
           <NavLink
@@ -553,16 +561,18 @@ function Navbar() {
               className="absolute w-44  bg-gray-800 max-h-0 rounded-2xl overflow-hidden transition-all duration-700 z-10"
               ref={joinRef}
             >
-              {joinLinks.map((join, index) => (
-                <HashLink
-                  key={index}
-                  to={`RejoignezNous${join.hash}`}
-                  smooth
-                  className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
-                >
-                  {join.label}
-                </HashLink>
-              ))}
+              <NavLink
+                to={`/DeposerCv`}
+                className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Déposer votre CV
+              </NavLink>
+              <NavLink
+                to={`/DevenirPartenaire`}
+                className="block ml-1 px-1 py-2 text-sm font-semibold text-white rounded-xl  hover:text-sky-300"
+              >
+                Devenir partenaire
+              </NavLink>
             </div>
           </div>
           <NavLink

@@ -38,13 +38,11 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      myPink: "#FFD2D2",
-      myChocolate: "#B27272",
-      myRed: "#EF4136",
       transparentBlack: "rgba(0,0,0,0.5)",
       transparentBlack2: "rgba(0,0,0,0.7)",
       transparentBlue: "rgba( 30, 64, 175 ,0.8)",
-      transparentWhite: "rgba(255,255,255,0.65)",
+      transparentWhite: "rgba(255,255,255,0.4)",
+      transparentWhite2: "rgba(255,255,255,0.65)",
     }),
     columns: {
       auto: "auto",
@@ -110,6 +108,7 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+      120: "44rem",
     },
     animation: {
       none: "none",
