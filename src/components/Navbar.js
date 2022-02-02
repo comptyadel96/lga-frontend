@@ -144,7 +144,7 @@ function Navbar() {
               setBurgerOpened(!burgerOpened)
             }}
           >
-            A Propos
+            À propos
           </NavLink>
           <div className="flex flex-col   pr-5  bg-white z-50">
             <div className=" flex items-center justify-between w-full">
@@ -419,7 +419,7 @@ function Navbar() {
             }
             to="/APropos"
           >
-            A propos
+            À propos
           </NavLink>
           <NavLink
             className={(navData) =>

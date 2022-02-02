@@ -20,7 +20,7 @@ function DropDown() {
     <div className="flex items-center relative px-3 cursor-pointer" onClick={toggleDropdown}>
       {/* dropdown */}
       <div>
-        <p className="font-semibold text-red-700 hover:text-blue-700 ">
+        <p className="font-semibold text-blue-700 hover:text-red-700 ">
           {selected}
         </p>
         <div

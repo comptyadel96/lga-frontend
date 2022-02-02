@@ -90,7 +90,7 @@ function DeposerCv() {
         </div>
       </div>
       {/* bouton */}
-      <button className="bg-green-300 text-white font-semibold cursor-pointer self-end mr-10 mb-8 px-2 py-1 rounded-lg hover:bg-green-400">
+      <button className="bg-green-400 text-white font-semibold cursor-pointer self-end mr-10 mb-8 px-2 py-1 rounded-lg hover:bg-green-500">
         Envoyer
       </button>
     </div>
